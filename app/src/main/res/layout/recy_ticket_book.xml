@@ -107,7 +107,13 @@
                     android:layout_weight="1.4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
+                    <ImageView
+                        android:layout_margin="9dp"
+                        android:padding="9dp"
+                        android:background="@drawable/shape_search_loc"
+                        android:src="@drawable/ic_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -142,16 +148,7 @@
 
                 </LinearLayout>
             </LinearLayout>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="9dp"
-                android:background="@drawable/shape_search_loc"
-                android:padding="9dp"
-                android:src="@drawable/ic_location" />
         </LinearLayout>
-
         <LinearLayout
             android:orientation="vertical"
             android:weightSum="3"

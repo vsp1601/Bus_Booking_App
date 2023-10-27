@@ -1,21 +1,21 @@
 <resources>
     <string name="app_name">MAD_Bus</string>
     <string-array name="travel_from">
-        <item>DHAKA</item>
-        <item>SYLHET</item>
-        <item>KHULNA</item>
-        <item>BARISAL</item>
-        <item>RAJSHAHI</item>
-        <item>RANGPUR</item>
+        <item>Gandhipuram</item>
+        <item>Ukkadam</item>
+        <item>Railway Station</item>
+        <item>Ramanathapuram</item>
+        <item>Vadavalli</item>
+        <item>Ettimadai</item>
     </string-array>
 
     <string-array name="travel_to">
-        <item>DHAKA</item>
-        <item>SYLHET</item>
-        <item>KHULNA</item>
-        <item>BARISAL</item>
-        <item>RAJSHAHI</item>
-        <item>RANGPUR</item>
+        <item>Singanallur</item>
+        <item>Ukkadam</item>
+        <item>Vadavalli</item>
+        <item>Ettimadai</item>
+        <item>Gandhipuram</item>
+        <item>RS Puram</item>
     </string-array>
 
     <string-array name="bus_type">

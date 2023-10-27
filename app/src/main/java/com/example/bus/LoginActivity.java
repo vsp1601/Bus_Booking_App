@@ -2,6 +2,7 @@ package com.example.bus;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.view.WindowManager;
@@ -40,11 +41,13 @@ public class LoginActivity extends AppCompatActivity {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 strLogEmail = etLogEmail.getText().toString().trim();
                 strLogPassword = etLogPassword.getText().toString().trim();
 
                 if (isLogEmailEmpty() && Patterns.EMAIL_ADDRESS.matcher(strLogEmail).matches()) {
-                    if (strLogPassword.isEmpty()) {
+                    Toast.makeText(LoginActivity.this, "Logging in....", Toast.LENGTH_SHORT).show();
+                    if (!strLogPassword.isEmpty()) {
                         firebaseAuth.signInWithEmailAndPassword(strLogEmail, strLogPassword)
                                 .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                                     @Override
