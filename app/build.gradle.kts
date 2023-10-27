@@ -2,6 +2,9 @@ plugins {
     id("com.android.application")
     id("com.google.gms.google-services")
 }
+//repositories {
+//    mavenCentral()
+//}
 
 android {
     namespace = "com.example.bus"
@@ -43,4 +46,6 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth:22.1.2")
     implementation("com.google.firebase:firebase-firestore:24.8.1")
+
+    implementation ("com.razorpay:checkout:1.6.33")
 }

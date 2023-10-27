@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DownloadActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/constraintGuideLineID"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.26"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/red"
+        app:layout_constraintBottom_toBottomOf="@id/constraintGuideLineID"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:textSize="35sp"
+            android:text="Your Ticket"
+            android:textColor="@color/white"
+            android:translationX="140dp"
+            android:translationY="30dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="@id/constraintGuideLineID"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#E8E8E8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <LinearLayout
+        android:weightSum="5"
+        android:orientation="vertical"
+        android:translationY="200dp"
+        android:background="@drawable/shape_from_to"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/constraintGuideLineID"
+        app:layout_constraintBottom_toBottomOf="@id/constraintGuideLineID"
+        android:layout_width="350dp"
+        android:layout_height="600dp">
+
+        <LinearLayout
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:gravity="center|right"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/dndTvFromID"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="28dp"
+                    android:textAllCaps="false"
+                    android:text="Dhaka"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+<!--                <ImageView-->
+<!--                    android:padding="35dp"-->
+<!--                    android:src="@drawable/bus_front"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent" />-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center|left"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/dndTvToID"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="28dp"
+                    android:textAllCaps="false"
+                    android:text="Khulna"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:weightSum="2"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="17dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/shape_dnd"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1.4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+<!--                        <ImageView-->
+<!--                            android:layout_margin="8dp"-->
+<!--                            android:src="@drawable/icd_calendar"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent" />-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center|left"
+                        android:layout_weight="0.6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_marginLeft="4dp"
+                            android:fontFamily="sans-serif-black"
+                            android:textSize="24dp"
+                            android:textAllCaps="false"
+                            android:text="Date"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/dndTvDateID"
+                        android:fontFamily="sans-serif-black"
+                        android:textSize="17dp"
+                        android:textAllCaps="false"
+                        android:text="XX,00 XXX 0000"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:weightSum="2"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="17dp"
+                android:background="@drawable/shape_dnd"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_weight="1.4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+<!--                        <ImageView-->
+<!--                            android:layout_margin="8dp"-->
+<!--                            android:src="@drawable/icd_clock"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent" />-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center|left"
+                        android:layout_weight="0.6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_marginLeft="4dp"
+                            android:fontFamily="sans-serif-black"
+                            android:textSize="24sp"
+                            android:textAllCaps="false"
+                            android:text="Time"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/dndTvTimeID"
+                        android:fontFamily="sans-serif-black"
+                        android:textSize="17dp"
+                        android:textAllCaps="false"
+                        android:text="00:00 PM"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

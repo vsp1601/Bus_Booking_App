@@ -1,6 +1,7 @@
 package com.example.bus;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.WindowManager;
 import android.content.Intent;
 
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.widget.TextView;
 
+import com.google.api.LogDescriptor;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
@@ -65,9 +67,11 @@ public class Booking extends AppCompatActivity {
 
         arrayList = new ArrayList<trip>();
         adapter = new tripAdapter(Booking.this, arrayList, tvBookPass, tvBookDate, strGetEmail, strGetName);
+        Log.d("tripadap", "onCreate: ");
         recyclerView.setAdapter(adapter);
 
         if (strGetFrom.matches("Ettimadai") && strGetTo.matches("Gandhipuram")) {
+
             DhkSyl();
         } else if (strGetFrom.matches("Vadavalli") && strGetTo.matches("Ettimadai")) {
             KhlRaj();
@@ -75,17 +79,24 @@ public class Booking extends AppCompatActivity {
     }
 
     private void DhkSyl() {
+        Log.d("successdhk", "success");
+
         db.collection("DhkSyl")
-                .orderBy("Time", Query.Direction.ASCENDING)
+                .orderBy("rTime", Query.Direction.ASCENDING)
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
+
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+                        Log.d("successdhkin", "succesins");
+
                         if (error != null) {
                             // Handle the error, e.g., log it or display an error message
+                            Log.d("error1", "error");
                             return;
                         }
 
                         for (DocumentChange dc : value.getDocumentChanges()) {
+                            Log.d("dcchange", "docuc");
                             if (dc.getType() == DocumentChange.Type.ADDED) {
                                 arrayList.add(dc.getDocument().toObject(trip.class));
                             }
@@ -98,7 +109,7 @@ public class Booking extends AppCompatActivity {
 
     private void KhlRaj() {
         db.collection("KhlRaj")
-                .orderBy("Time", Query.Direction.ASCENDING)
+                .orderBy("rTime", Query.Direction.ASCENDING)
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {

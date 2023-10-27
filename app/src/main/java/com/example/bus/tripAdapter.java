@@ -1,8 +1,11 @@
 package com.example.bus;
 
+import static android.content.ContentValues.TAG;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +34,7 @@ public class tripAdapter extends RecyclerView.Adapter<tripAdapter.MyViewHolder> 
     @NonNull
     @Override
     public tripAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        Log.d("hi", "hello1");
         View v = LayoutInflater.from(context).inflate(R.layout.recy_ticket_book, parent, false);
         return new MyViewHolder(v);
     }

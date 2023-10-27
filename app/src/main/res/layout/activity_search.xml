@@ -6,12 +6,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     tools:context=".SearchActivity">
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/constraintGuidelineID"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.26"
         android:layout_width="0dp"
-        android:layout_height="0dp"/>
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="190dp" />
     <LinearLayout
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/constraintGuidelineID"
