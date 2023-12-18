@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -10,10 +10,9 @@
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/constraintGuideLineID"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.26"
+        app:layout_constraintGuide_percent="0.25"
         android:layout_width="0dp"
-        android:layout_height="0dp" />
-
+        android:layout_height="0dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -21,19 +20,18 @@
         app:layout_constraintBottom_toBottomOf="@id/constraintGuideLineID"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="0dp">
-
+        app:layout_editor_absoluteX="0dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-black"
-            android:textSize="35sp"
             android:text="Your Ticket"
             android:textColor="@color/white"
+            android:textSize="35sp"
+            android:textStyle="bold"
             android:translationX="140dp"
             android:translationY="30dp"
-            android:textStyle="bold"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="Missing Constraints"/>
     </LinearLayout>
 
     <LinearLayout
@@ -42,7 +40,6 @@
         android:background="#E8E8E8"
         android:layout_width="match_parent"
         android:layout_height="0dp" />
-
     <LinearLayout
         android:weightSum="5"
         android:orientation="vertical"
@@ -56,68 +53,66 @@
         android:layout_height="600dp">
 
         <LinearLayout
-            android:weightSum="3"
-            android:orientation="horizontal"
-            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="422dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3">
 
             <LinearLayout
-                android:gravity="center|right"
-                android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="98dp"
+                android:layout_weight="1"
+                android:gravity="center|right">
 
                 <TextView
                     android:id="@+id/dndTvFromID"
-                    android:fontFamily="sans-serif-black"
-                    android:textSize="28dp"
-                    android:textAllCaps="false"
-                    android:text="Dhaka"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Dhaka"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="28dp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
-<!--                <ImageView-->
-<!--                    android:padding="35dp"-->
-<!--                    android:src="@drawable/bus_front"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent" />-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="35dp"
+                    android:src="@drawable/bus_front" />
             </LinearLayout>
 
             <LinearLayout
-                android:gravity="center|left"
-                android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="98dp"
+                android:layout_weight="1"
+                android:gravity="center|left">
 
                 <TextView
                     android:id="@+id/dndTvToID"
-                    android:fontFamily="sans-serif-black"
-                    android:textSize="28dp"
-                    android:textAllCaps="false"
-                    android:text="Khulna"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Khulna"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="28dp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
-
         <LinearLayout
             android:weightSum="2"
             android:orientation="horizontal"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
             <LinearLayout
                 android:orientation="vertical"
                 android:weightSum="2"
@@ -127,64 +122,61 @@
                 android:layout_marginRight="6dp"
                 android:background="@drawable/shape_dnd"
                 android:layout_weight="1"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
                 <LinearLayout
                     android:weightSum="2"
                     android:orientation="horizontal"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
                     <LinearLayout
                         android:layout_weight="1.4"
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent">
-
-<!--                        <ImageView-->
-<!--                            android:layout_margin="8dp"-->
-<!--                            android:src="@drawable/icd_calendar"-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="match_parent" />-->
+                        <ImageView
+                            android:layout_margin="8dp"
+                            android:src="@drawable/icd_calender"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
                     </LinearLayout>
-
                     <LinearLayout
                         android:gravity="center|left"
                         android:layout_weight="0.6"
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent">
+
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_marginLeft="4dp"
                             android:fontFamily="sans-serif-black"
-                            android:textSize="24dp"
-                            android:textAllCaps="false"
                             android:text="Date"
-                            android:textStyle="bold"
+                            android:textAllCaps="false"
                             android:textColor="@color/black"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:textSize="24dp"
+                            android:textStyle="bold" />
+
                     </LinearLayout>
                 </LinearLayout>
-
                 <LinearLayout
                     android:gravity="center"
                     android:layout_weight="1"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
                     <TextView
                         android:id="@+id/dndTvDateID"
-                        android:fontFamily="sans-serif-black"
-                        android:textSize="17dp"
-                        android:textAllCaps="false"
-                        android:text="XX,00 XXX 0000"
-                        android:textStyle="bold"
-                        android:textColor="@color/black"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:text="xxyyzzzz"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
-
             <LinearLayout
                 android:orientation="vertical"
                 android:weightSum="2"
@@ -194,52 +186,46 @@
                 android:layout_marginBottom="17dp"
                 android:background="@drawable/shape_dnd"
                 android:layout_weight="1"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <LinearLayout
                     android:weightSum="2"
                     android:orientation="horizontal"
+                    android:layout_weight="1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
+                    android:layout_height="match_parent">
                     <LinearLayout
                         android:layout_weight="1.4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
-
-<!--                        <ImageView-->
-<!--                            android:layout_margin="8dp"-->
-<!--                            android:src="@drawable/icd_clock"-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="match_parent" />-->
+                        <ImageView
+                            android:layout_margin="8dp"
+                            android:src="@drawable/icd_clock"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
                     </LinearLayout>
-
                     <LinearLayout
                         android:gravity="center|left"
                         android:layout_weight="0.6"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
-
                         <TextView
                             android:layout_marginLeft="4dp"
                             android:fontFamily="sans-serif-black"
-                            android:textSize="24sp"
+                            android:textSize="24dp"
                             android:textAllCaps="false"
                             android:text="Time"
                             android:textStyle="bold"
                             android:textColor="@color/black"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"/>
                     </LinearLayout>
                 </LinearLayout>
-
                 <LinearLayout
                     android:gravity="center"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
                     <TextView
                         android:id="@+id/dndTvTimeID"
                         android:fontFamily="sans-serif-black"
@@ -249,14 +235,145 @@
                         android:textStyle="bold"
                         android:textColor="@color/black"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"/>
                 </LinearLayout>
             </LinearLayout>
-
         </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:weightSum="2"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:paddingLeft="27dp"
+                    android:paddingBottom="2dp"
+                    android:gravity="center|bottom|left"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-black"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textSize="18dp"
+                    android:text="Passenger"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:id="@+id/dndTvPassID"
+                    android:paddingLeft="27dp"
+                    android:paddingTop="2dp"
+                    android:gravity="center|top|left"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-black"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textSize="18dp"
+                    android:text="00"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:weightSum="2"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center|bottom|left"
+                    android:paddingLeft="32dp"
+                    android:paddingBottom="2dp"
+                    android:text="Ticket"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    tools:visibility="gone" />
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center|top|left"
+                    android:paddingLeft="32dp"
+                    android:paddingTop="2dp"
+                    android:text="RT02-H7"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    tools:visibility="gone" />
 
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/qr" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:weightSum="2"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:paddingLeft="53dp"
+                    android:paddingBottom="2dp"
+                    android:gravity="center|bottom|left"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-black"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textSize="18dp"
+                    android:text="Seat"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:id="@+id/dndTvSeatID"
+                    android:paddingLeft="53dp"
+                    android:paddingTop="2dp"
+                    android:gravity="center|top|left"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-black"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textSize="18dp"
+                    android:text="XX"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btnDownload_ID"
+                android:layout_margin="30dp"
+                android:background="@drawable/shape_book_ticket_btn"
+                app:backgroundTint="@color/red"
+                android:text="Download Ticket"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

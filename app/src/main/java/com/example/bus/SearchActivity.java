@@ -79,6 +79,7 @@ public class SearchActivity extends AppCompatActivity implements AdapterView.OnI
 
         ArrayAdapter<CharSequence> adapterTO = ArrayAdapter.createFromResource(this, R.array.travel_to, R.layout.search_to);
         adapterTO.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapterTO.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sTO.setAdapter(adapterTO);
         sTO.setOnItemSelectedListener(this);
 

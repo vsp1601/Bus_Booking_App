@@ -50,6 +50,10 @@
             android:name=".PaymentActivity"
             android:exported="false">
         </activity>
+        <activity
+            android:name=".DownloadActivity"
+            android:exported="false">
+        </activity>
 
 
     </application>

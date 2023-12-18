@@ -33,6 +33,7 @@ public class Booking extends AppCompatActivity {
     FirebaseFirestore db;
     Intent intent;
     String strGetFrom, strGetTo, strGetDate, strGetPass, strGetEmail, strGetName;
+    String strGetFromD, strGetToD;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,9 +73,26 @@ public class Booking extends AppCompatActivity {
 
         if (strGetFrom.matches("Ettimadai") && strGetTo.matches("Gandhipuram")) {
 
+            // Access the global class instance
+            MyGlobalClass globalClass = MyGlobalClass.getInstance();
+
+            globalClass.setSharedFrom("Ettimadai");
+            globalClass.setSharedTo("Gandhipuram");
+            globalClass.setBookDate(strGetDate);
             DhkSyl();
+
+
         } else if (strGetFrom.matches("Vadavalli") && strGetTo.matches("Ettimadai")) {
+            MyGlobalClass globalClass = MyGlobalClass.getInstance();
+
+            globalClass.setSharedFrom("Vadavalli");
+            globalClass.setSharedTo("Ettimadai");
+            globalClass.setBookDate(strGetDate);
+
             KhlRaj();
+
+
+
         }
     }
 
@@ -91,7 +109,7 @@ public class Booking extends AppCompatActivity {
 
                         if (error != null) {
                             // Handle the error, e.g., log it or display an error message
-                            Log.d("error1", "error");
+                            Log.d("error1", String.valueOf(error));
                             return;
                         }
 

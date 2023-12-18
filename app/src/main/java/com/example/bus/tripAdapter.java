@@ -60,15 +60,22 @@ public class tripAdapter extends RecyclerView.Adapter<tripAdapter.MyViewHolder> 
                 strGetEmail = intent.getStringExtra("email");
                 strGetName = intent.getStringExtra("name");
 
-                intent = new Intent(v.getContext(), SeatActivity.class);
-                intent.putExtra("pick", trip.pick.toString());
-                intent.putExtra("pass", strTPass);
-                intent.putExtra("drop", trip.drop.toString());
-                intent.putExtra("time", trip.rTime.toString());
-                intent.putExtra("price", trip.price.toString());
-                intent.putExtra("date", strDate);
-                intent.putExtra("email", strGetEmail);
-                intent.putExtra("name", strGetName);
+                intent = new Intent(v.getContext(), PaymentActivity.class);
+//                intent.putExtra("pick", trip.pick.toString());
+//                intent.putExtra("pass", strTPass);
+//                intent.putExtra("drop", trip.drop.toString());
+                MyGlobalClass globalClass = MyGlobalClass.getInstance();
+                globalClass.setBookTime(trip.rTime.toString());
+                globalClass.setSharedPrice(trip.price.toString());
+
+
+
+
+                //               intent.putExtra("time", trip.rTime.toString());
+//                intent.putExtra("price", trip.price.toString());
+//                intent.putExtra("date", strDate);
+//                intent.putExtra("email", strGetEmail);
+//                intent.putExtra("name", strGetName);
                 context.startActivity(intent);
             }
         });
@@ -92,6 +99,8 @@ public class tripAdapter extends RecyclerView.Adapter<tripAdapter.MyViewHolder> 
             tv_Drop = itemView.findViewById(R.id.rvTrip_tDropID);
             tv_Price = itemView.findViewById(R.id.rvTrip_PriceID);
             btnBooking = itemView.findViewById(R.id.btn_recyBookID);
+
+
         }
     }
 }
